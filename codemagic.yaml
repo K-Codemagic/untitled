@@ -36,9 +36,6 @@ workflows:
         script: |
           cd . && flutter test
         ignore_failure: true          
-      - name: Install pods
-        script: |
-          find . -name "Podfile" -execdir pod install \;
     artifacts:
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
