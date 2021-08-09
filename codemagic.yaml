@@ -36,10 +36,13 @@ workflows:
         script: |
           cd . && flutter test
         ignore_failure: true
+      - name: Build AAB with Flutter  
+        script: |
+          cd . && flutter build appbundle --debug
       - name: Build APK with Flutter  
         script: |
           cd . && flutter build apk --release
-          cd . && flutter build aab --release
+          
     artifacts:
       - build/**/outputs/**/*.apk
       - build/**/outputs/**/*.aab
