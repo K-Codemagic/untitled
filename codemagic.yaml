@@ -40,7 +40,7 @@ workflows:
         script: |
           cd . && flutter build apk --release
     artifacts:
-      - android/app/build/outputs/**/*.aab
+      - build/outputs/**/*.apk
       - build/**/outputs/**/*.aab
       - build/**/outputs/**/mapping.txt
       - flutter_drive.log
