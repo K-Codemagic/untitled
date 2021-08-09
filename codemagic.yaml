@@ -39,7 +39,6 @@ workflows:
       - name: Build APK with Flutter  
         script: |
           cd . && flutter build apk --release
-          #./gradlew bundleRelease
     artifacts:
       - android/app/build/outputs/**/*.aab
       - build/**/outputs/**/*.aab
