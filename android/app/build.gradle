@@ -67,10 +67,6 @@ android {
           }
       }
       buildTypes {
-    debug {
-        versionNameSuffix "-MyNiceDebugModeName"
-    }
-      buildTypes {
         release {
             signingConfig signingConfigs.release
         }
