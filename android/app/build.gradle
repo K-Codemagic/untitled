@@ -67,23 +67,10 @@ android {
       }
       buildTypes {
         release {
-            signingConfig signingConfigs.debug
-            applicationVariants.all { variant ->
-                variant.outputs.all {
-                    def appName = "your_app_name_"
-                    def buildType = variant.variantData.variantConfiguration.buildType.name
-                    def newName
-                    if (buildType == 'debug'){
-                        newName = "app-${variant.getFlavorName()}-debug.apk"
-                    } else {
-                        newName = "${appName}${defaultConfig.versionName}_${variant.getFlavorName()}.apk"
-                    }
-                    outputFileName = newName
-                }
-            }
+            signingConfig signingConfigs.release
         }
     }
-}    
+}  
 flutter {
     source '../..'
 }
