@@ -47,9 +47,6 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        def date = new Date();
-        def formattedDate = date.format('yyyy-MM-dd-HHmmss')
-        setProperty("archivesBaseName", "Quest_" + versionName + "_"+formattedDate)
         // archivesBaseName = "$applicationId-v$versionCode-$versionName"
         // setProperty("archivesBaseName", "${applicationId}-v${versionName}(${versionCode})")
     }
