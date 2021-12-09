@@ -31,7 +31,8 @@ workflows:
           cd . && flutter packages pub get
       - name: Build AAB with Flutter  
         script: |
-          cd . && flutter build appbundle --release      
+          cd . && flutter build apk --debug
+          cd . && flutter build apk --release      
     artifacts:
       - build/**/outputs/apk/**/*.apk
       - build/**/outputs/bundle/**/*.aab
